@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript 30</title>
+   
+</head>
+<body>
+ <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+   header{
+    background-image: url('wave-haikei.png');
+    width: auto;
+    height: 330px;
+    font-size: larger;
+    color: aliceblue;
+  
+   }
+   .key {
+     padding: 5px 10px;
+     transition: all 0.07s;
+    border-radius: 27px;
+background: linear-gradient(145deg, #f6cd78, #cfad65);
+box-shadow:  5px 5px 0px #a38850,
+             -5px -5px 0px #fff890;
+   }
+   .key:hover{
+    -webkit-box-shadow:0px 0px 57px 110px rgba(255,233,87,0.19);
+-moz-box-shadow: 0px 0px 57px 110px rgba(255,233,87,0.19);
+box-shadow: 0px 0px 57px 110px rgba(255,233,87,0.19);
+   }
+   .playing{
+    transform: scale(1.1);
+    border-color: aqua;
+    box-shadow: 0 0 10px #fabe33;
+   }
+   .key span{
+     padding-left: 10px;
+   }
+   .Btn {
+  position: relative;
+  width: 150px;
+  height: 55px;
+  border-radius: 45px;
+  border: none;
+  background-color: rgb(151, 95, 255);
+  color: white;
+  box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+  0px 5px 10px rgba(5, 5, 5, 0.212),
+  0px -10px 10px rgb(124, 54, 255) inset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, orange, transparent 20%, orangered);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: orange;
+}
+
+.Btn::before {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.678);
+  content: "";
+  filter: blur(1px);
+  top: 7px;
+  border-radius: 50%;
+}
+
+.Btn::after {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  background-color: rgba(250, 250, 250, 0.137);
+  content: "";
+  filter: blur(1px);
+  bottom: 7px;
+  border-radius: 50%;
+}
+
+.Btn:hover {
+  animation: jello-horizontal 0.9s both;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+ </style>
+<div class="container">
+
+    <div class="keys">
+        <div class="key" data-key="65">
+            <kbd>A</kbd>
+            <span class="sound">Monkey sound</span>
+        </div>
+        <div class="key" data-key="66">
+             <kbd>B</kbd>
+            <span class="sound">a barking dog</span>
+        </div>
+        <div class="key" data-key="67">
+             <kbd>C</kbd>
+            <span class="sound">Monkey 2</span>
+        </div>
+        <div class="key" data-key="68">
+             <kbd>D</kbd>
+            <span class="sound">gun sound</span>
+        </div>
+        <div class="key" data-key="69">
+             <kbd>E</kbd>
+            <span class="sound">dog 2</span>
+        </div>
+        <div class="key" data-key="70">
+             <kbd>F</kbd>
+            <span class="sound">lion sound</span>
+        </div>
+        <div class="key" data-key="71">
+             <kbd>G</kbd>
+            <span class="sound">Mosquito</span>
+        </div>
+        <div class="key" data-key="72">
+             <kbd>H</kbd>
+            <span class="sound">baby crying</span>
+        </div>
+        <div class="key" data-key="73">
+             <kbd>I</kbd>
+            <span class="sound">alien talking</span>
+        </div>
+    </div>
+    <audio src="728731__mastersoundboy2005__ghost-monkey-sound-effect.mp3" data-key="65"></audio>
+    <audio src="236051__delphidebrain__jazz-the-dog-howl-bark-128.wav" data-key="66"></audio>
+    <audio data-key="67" src="728731__mastersoundboy2005__ghost-monkey-sound-effect.mp3"></audio>
+    <audio data-key="68" src="347130__novasoundtechnology__custom-snare-lex-trap-drum-roll-8-count-nova-sound (1).wav"></audio>
+    <audio data-key="69" src="236051__delphidebrain__jazz-the-dog-howl-bark-128.wav"></audio>
+    <audio data-key="70" src="62779__noisecollector__elephant.wav"></audio>
+    <audio data-key="71" src="168647__hiddenpersuader__bent-trumpet-sound-from-casio.wav"></audio>
+    <audio data-key="72" src="211526__the_yura__crying-newborn-baby-child-4.wav"></audio>
+    <audio data-key="73" src="336698__fordps3__space-sounds-alien-laugh.wav"></audio>
+      
+</div>
+  
+<div class="key" data-key="32">
+  <kbd>Space</kbd>
+  <span class="sound">stop playing</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js">
+     
+    </script>
+</body>
+</html>
